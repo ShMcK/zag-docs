@@ -15,7 +15,7 @@ const selectData = [
 
 export function SelectWithForm() {
   const [state, send] = useMachine(
-    menu.machine({ id: createUniqueId(), name: "country" }),
+    select.machine({ id: createUniqueId(), name: "country" }),
   )
 
   const api = createMemo(() => select.connect(state, send, normalizeProps))
